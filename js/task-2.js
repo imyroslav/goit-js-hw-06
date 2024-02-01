@@ -16,7 +16,7 @@ addItem(newItem) {
 
 removeItem(itemToRemove) {
     const i = this.#item.indexOf(itemToRemove);
-    this.#item.splice(i, 1);
+    if (i === -1 ) {return `Item ${itemToRemove} not exist`} else {this.#item.splice(i, 1);}
 }
 
 }
